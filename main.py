@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
-
+print(f"Token used: {token}")
 # Logging setup
 logging.basicConfig(
     level=logging.DEBUG,
