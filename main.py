@@ -3,6 +3,7 @@ from discord.ext import commands
 import logging
 from dotenv import load_dotenv
 import os
+from keep_alive import keep_alive
 
 load_dotenv()
 token = "MTQzMTkwMzkyOTQwNjU5MDk5Ng.GSCe57.EgkHhK6OPrEXN7yXHw-YF51CkBcXDPutBsuzOc"
@@ -73,4 +74,5 @@ async def listfiles(ctx):
     else:
         await ctx.send(embed=discord.Embed(title="No files found", color=0xFF0000))
 
+keep_alive()
 bot.run(token)
