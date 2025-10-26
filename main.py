@@ -15,4 +15,6 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
-  print("Jarvis Bot is online sir.")
+  print(f"{bot.user.name} is online sir.")
+  
+bot.run(token, log_handler=handler, log_level=logging.DEBUG)
